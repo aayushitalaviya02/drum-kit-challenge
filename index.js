@@ -1,22 +1,18 @@
-console.log("working");
 var noOfButtons = document.querySelectorAll(".drum").length;
 
 // Button press
 for (var i = 0; i < noOfButtons; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-    // this.style.color = "white";
     var btnInnerText = this.innerText;
     makeSound(btnInnerText);
     buttonAnimation(btnInnerText);
   });
 }
 
-// key press from keyboard press
+// key press from keyboard
 document.addEventListener("keypress", function (event) {
   makeSound(event.key);
   buttonAnimation(event.key);
-  // var lowerKey = event.code.toLocaleLowerCase().charAt(event.code.length - 1);
-  // makeSound(lowerKey);
 });
 
 function makeSound(key) {
