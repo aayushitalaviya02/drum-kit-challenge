@@ -57,7 +57,7 @@ function makeSound(key) {
       break;
 
     default:
-      alert("Please press a key from given drums");
+      alert("Please press a key from given drums.");
       break;
   }
 }
